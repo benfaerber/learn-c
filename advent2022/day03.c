@@ -13,7 +13,7 @@ void pt2() {
 
 }
 
-void main() {
+int main(void) {
 
 }
                     
