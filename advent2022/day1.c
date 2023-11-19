@@ -26,16 +26,18 @@ void pt1() {
     printf("Got: %d\n", max);
 }
 
+#define MAX_NTH 3
+#define LINE_COUNT 100
 
 void pt2() {
     FILE *fptr;
     fptr = fopen("day1.txt", "r");
-    char output[100];
+    char output[LINE_COUNT];
     int current_elf;
-    int max[] = {0, 0, 0};
-    while (fgets(output, 100, fptr)) {
+    int max[MAX_NTH];
+    while (fgets(output, LINE_COUNT, fptr)) {
         if (output[0] == '\n') {
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < MAX_NTH; i++) {
                 int current_max = max[i];
                 if (current_elf > current_max) {
                     max[i] = current_elf;
