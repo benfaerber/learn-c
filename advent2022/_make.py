@@ -2,8 +2,8 @@ DAY_COUNT = 25;
 from os.path import exists
 
 for i in range(DAY_COUNT):
-    
-    name = "day" + ("0" + str(i) if i < 10 else str(i))
+    j = i+1 
+    name = "day" + ("0" + str(j) if j < 10 else str(j))
     if not exists(name + '.c'):
         with open(name + '.c', 'w') as c:
             c.write('''
